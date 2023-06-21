@@ -10,7 +10,7 @@ const getCartItem = (cartProducts, onAdd, onRemove) => {
 
     const item = cartProducts.map(item=>{
         const onAddHandler= ()=>{
-            onAdd(item)
+            onAdd({...item, amount:1})
         }
 
         const onRemoveHandler = ()=>{
